@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<com.example.vitaly.logapplication.MyViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +8,20 @@
     android:orientation="vertical"
     tools:context="com.example.vitaly.logapplication.MainActivity">
 
-    <com.example.vitaly.logapplication.MyTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-</LinearLayout>
+
+    <com.example.vitaly.logapplication.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_view_1"/>
+
+    <com.example.vitaly.logapplication.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_view_2"
+        android:id="@+id/my_text_view_with_id"/>
+
+
+</com.example.vitaly.logapplication.MyViewGroup>

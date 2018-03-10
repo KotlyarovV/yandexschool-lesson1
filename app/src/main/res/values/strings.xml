@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LogApplication</string>
+    <string name="my_view_1">My view 1</string>
+    <string name="my_view_2">My view 2</string>
 </resources>

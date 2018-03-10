@@ -28,6 +28,23 @@ public class MyTextView extends AppCompatTextView {
         Log.d(TAG, "ctor2");
     }
 
+    public MyTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        Log.d(TAG, "ctor3");
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        Log.d(TAG, "onLayout");
+    }
+
+    @Override
+    protected void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter) {
+        super.onTextChanged(text, start, lengthBefore, lengthAfter);
+        Log.d(TAG, "onTextChanged");
+    }
+
     public void finalize() {
         Log.d(TAG, "finalize");
     }
