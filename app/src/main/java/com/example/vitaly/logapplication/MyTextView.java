@@ -71,8 +71,6 @@ public class MyTextView extends AppCompatTextView {
         Log.d(TAG, "onDraw");
     }
 
-
-
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
