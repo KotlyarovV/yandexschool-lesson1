@@ -2,6 +2,7 @@ package com.example.vitaly.logapplication;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -62,6 +63,17 @@ public class MyViewGroup extends LinearLayout {
         Log.d(TAG, "onMeasure");
     }
 
+    @Override
+    public Parcelable onSaveInstanceState() {
+        Log.d(TAG, "onSaveInstanceState");
+        return super.onSaveInstanceState();
+    }
+
+    @Override
+    public void onRestoreInstanceState(Parcelable parcelable) {
+        super.onRestoreInstanceState(parcelable);
+        Log.d(TAG, "onRestoreInstanceState");
+    }
 
     @Override
     public void dispatchDraw(Canvas canvas) {
@@ -80,7 +92,7 @@ public class MyViewGroup extends LinearLayout {
         super.onDraw(canvas);
         Log.d(TAG, "onDraw");
     }
-    
+
     @Override
     public void finalize() {
         Log.d(TAG, "finalize");

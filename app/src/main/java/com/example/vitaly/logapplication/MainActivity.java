@@ -1,6 +1,7 @@
 package com.example.vitaly.logapplication;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         super.onContentChanged();
         Log.d(TAG, "onContentChanged");
     }
+
 
     @Override
     public void setContentView(@LayoutRes int layoutResID) {

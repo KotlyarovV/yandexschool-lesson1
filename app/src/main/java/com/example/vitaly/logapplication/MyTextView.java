@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.os.Build;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
@@ -26,7 +27,7 @@ public class MyTextView extends AppCompatTextView {
 
     public MyTextView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        Log.d(TAG, "ctor2");
+        Log.d(TAG, "ctor2 ");
     }
 
     public MyTextView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -50,6 +51,19 @@ public class MyTextView extends AppCompatTextView {
     public void layout(int l, int t, int r, int b) {
         super.layout(l, t, r, b);
         Log.d(TAG, "layout");
+    }
+
+
+    @Override
+    public Parcelable onSaveInstanceState() {
+        Log.d(TAG, "onSaveInstanceState");
+        return super.onSaveInstanceState();
+    }
+
+    @Override
+    public void onRestoreInstanceState(Parcelable parcelable) {
+        super.onRestoreInstanceState(parcelable);
+        Log.d(TAG, "onRestoreInstanceState");
     }
 
 
